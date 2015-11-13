@@ -1,0 +1,10 @@
+<h1>When I was a kid in {{ params }} </h1>
+
+<div class='col-md-9' ng-repeat='memory in memories'><strong>When I was a kid </strong>{{ memory.old_days }} <strong>but now </strong> {{ memory.these_days }} <br>
+---------------------------------------------------
+</div>
+
+<div class='col-md-3'>
+  <li><a href='/'>Home</a></li>
+  <li ng-repeat='memory in memories'><a href='/years/{{ memory.year }}'>{{ memory.year }} </a></li>
+</div>

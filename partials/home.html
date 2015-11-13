@@ -1,0 +1,25 @@
+
+<div class='row'>
+<form ng-submit='addMemory()'>
+<h1>When I was a kid...</h1>
+<p><textarea ng-model='old_days'></textarea></p>
+
+<h3>But now...</h3>
+<p><textarea ng-model='these_days'></textarea></p>
+
+
+<p>I was born in (year) &nbsp;<input type='text' ng-model='year'></p>
+
+<p><input type='submit' value='Submit'></p>
+</form>
+</div>
+
+<p class='col-md-9' ng-repeat='memory in memories'>
+<strong>When I was a kid </strong> {{ memory.old_days }} <strong>but now</strong> {{ memory.these_days }} <br>
+  - {{ memory.year }}
+  -------------------------------
+</p>
+<p class='col-md-3'>
+  <li><a href='/'>Home</a></li>
+  <li ng-repeat='memory in memories'><a href='/years/{{ memory.year }}'>{{ memory.year }} </a></li>
+</p>
